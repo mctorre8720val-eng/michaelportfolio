@@ -37,7 +37,7 @@ nav {
   position: sticky;
   top: 0;
   background: #ffffff;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 0px solid var(--border);
   z-index: 1000;
 }
 
@@ -291,6 +291,25 @@ footer {
   padding: 40px;
   color: #6b7280;
 }
+
+
+.wave {
+  display: inline-block;
+  font-size: 2.5rem;
+  transform-origin: 70% 70%;
+  animation: waveAnim 2.8s infinite;
+}
+
+@keyframes waveAnim {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  45% { transform: rotate(14deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(10deg); }
+  85%, 100% { transform: rotate(0deg); } /* pause */
+}
+
 
 /* =========================
    RESPONSIVE

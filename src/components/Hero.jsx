@@ -1,4 +1,6 @@
 import profile from "../assets/profile.jpg";
+import Lottie from "lottie-react";
+import waveAnim from "../assets/greetings.json";
 
 import {
   FaGithub,
@@ -34,8 +36,7 @@ export default function Hero() {
           <h5 className="subtitle">BSIT Student | Web & Android Developer</h5>
 
           <p className="description">
-            I build modern React applications with clean UI, scalable architecture,
-            and smooth user experiences.
+           I build responsive web applications using HTML, CSS, JavaScript, and React, with a focus on clean UI, scalable structure, and practical backend integration using Java and MySQL.
           </p>
 
           {/* LANGUAGES & TOOLS */}
@@ -120,7 +121,9 @@ export default function Hero() {
         {/* RIGHT SIDE */}
         <div className="hero-image">
           <img src={profile} alt="profile" />
+        <span className="wave">👋</span>
         </div>
+
 
       </div>
     </section>
