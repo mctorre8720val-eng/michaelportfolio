@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="hero-text">
 
           <h2>
-            HEY, I'M <span>KEL BOMI</span>
+            HEY, I'M <span>KEL</span>
           </h2>
 
           <h5 className="subtitle">Aspiring Software Engineer</h5>
