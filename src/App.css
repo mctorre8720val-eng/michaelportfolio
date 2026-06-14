@@ -7,6 +7,14 @@
   --muted: #64748b;
   --soft: #f1f5f9;
   --border: #e2e8f0;
+
+  /* Dark Sections */
+
+  
+  --bg-primary: #1f2028;
+  --bg-secondary: #2e3039;
+  --bg-alt: #3a3d4a;
+  --border-secondary: #4b5563;
 }
 
 /* RESET */
@@ -19,11 +27,13 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
   background: #ffffff;
   color: var(--primary);
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -37,7 +47,6 @@ nav {
   position: sticky;
   top: 0;
   background: #ffffff;
-  border-bottom: 0px solid var(--border);
   z-index: 1000;
 }
 
@@ -50,6 +59,7 @@ nav ul {
   display: flex;
   gap: 30px;
   list-style: none;
+  align-items: center;
 }
 
 nav a {
@@ -73,7 +83,6 @@ nav a:hover {
   padding: 0 80px;
 }
 
-/* LAYOUT */
 .hero-container {
   display: flex;
   justify-content: space-between;
@@ -83,7 +92,6 @@ nav a:hover {
   flex-direction: row-reverse;
 }
 
-/* TEXT */
 .hero-text {
   flex: 1;
 }
@@ -91,6 +99,7 @@ nav a:hover {
 .hero-text h2 {
   font-size: 52px;
   font-weight: 800;
+  line-height: 1.1;
 }
 
 .hero-text span {
@@ -129,10 +138,8 @@ nav a:hover {
   width: 320px;
   height: 320px;
   object-fit: cover;
-
   border-radius: 28% / 22%;
   border: 1px solid var(--border);
-
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
 }
@@ -162,7 +169,7 @@ nav a:hover {
 }
 
 /* =========================
-   TECH STACK ICONS
+   TECH STACK
 ========================= */
 .tech-stack {
   margin-top: 25px;
@@ -207,12 +214,12 @@ nav a:hover {
 }
 
 .btn:hover {
-  background: #4f46e5;
+  background: #2563eb;
   transform: translateY(-2px);
 }
 
 /* =========================
-   SKILLS SECTION
+   SKILLS
 ========================= */
 .skills-block {
   margin-top: 20px;
@@ -235,15 +242,12 @@ nav a:hover {
   display: flex;
   align-items: center;
   gap: 6px;
-
   padding: 8px 12px;
   background: var(--soft);
   border: 1px solid var(--border);
   border-radius: 10px;
-
   font-size: 13px;
   color: #374151;
-
   transition: 0.3s;
 }
 
@@ -259,7 +263,7 @@ nav a:hover {
 }
 
 /* =========================
-   SECTIONS / GRID / CARD
+   SECTIONS / CARDS
 ========================= */
 section {
   padding: 80px;
@@ -285,14 +289,125 @@ section {
   gap: 20px;
 }
 
-/* FOOTER */
+/* =========================
+   DARK SECTIONS
+========================= */
+
+#about,
+#contact {
+  background: var(--bg-primary);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+#projects {
+  background: var(--bg-secondary);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+#about::before,
+#projects::before,
+#contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(59, 130, 246, 0.12),
+    transparent 40%
+  );
+  pointer-events: none;
+}
+
+#about h2,
+#projects h2,
+#contact h2,
+#about h3,
+#projects h3,
+#contact h3 {
+  color: white;
+}
+
+#about p,
+#projects p,
+#contact p {
+  color: #d1d5db;
+}
+
+#about .card,
+#projects .card,
+#contact .card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border-secondary);
+  color: white;
+}
+
+#about .card p,
+#projects .card p,
+#contact .card p {
+  color: #d1d5db;
+}
+
+/* =========================
+   ABOUT COMPONENT
+========================= */
+
+.about-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.about-icons div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-secondary);
+  color: #e5e7eb;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.about-icons svg {
+  color: var(--accent);
+  font-size: 16px;
+}
+
+.about-icons div:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.about-icons div span {
+  font-weight: 500;
+}
+
+#about .card p {
+  line-height: 1.8;
+  font-size: 15px;
+  color: #d1d5db;
+}
+
+/* =========================
+   FOOTER
+========================= */
 footer {
   text-align: center;
   padding: 40px;
   color: #6b7280;
 }
 
-
+/* =========================
+   WAVE
+========================= */
 .wave {
   display: inline-block;
   font-size: 2.5rem;
@@ -307,14 +422,14 @@ footer {
   45% { transform: rotate(14deg); }
   60% { transform: rotate(-4deg); }
   75% { transform: rotate(10deg); }
-  85%, 100% { transform: rotate(0deg); } /* pause */
+  85%, 100% { transform: rotate(0deg); }
 }
 
-
 /* =========================
-   RESPONSIVE
+   TABLET
 ========================= */
 @media (max-width: 900px) {
+
   nav {
     padding: 20px 30px;
   }
@@ -324,12 +439,16 @@ footer {
   }
 
   .hero {
-    padding: 0 30px;
+    padding: 40px 30px;
   }
 
   .hero-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 42px;
   }
 
   .description {
@@ -337,7 +456,93 @@ footer {
   }
 
   .social-icons,
-  .tech-icons {
+  .tech-icons,
+  .skills-grid {
     justify-content: center;
+  }
+
+  .about-icons {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  nav ul {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  .hero {
+    padding: 50px 20px;
+    min-height: auto;
+  }
+
+  .hero-text h2 {
+    font-size: 34px;
+  }
+
+  .hero-image img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-icons {
+    grid-template-columns: 1fr;
+  }
+
+  .about-icons div {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+@media (max-width: 480px) {
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .wave {
+    font-size: 2rem;
+  }
+
+  .skill-item {
+    font-size: 12px;
+  }
+
+  .about-icons div {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .about-icons svg {
+    font-size: 14px;
   }
 }

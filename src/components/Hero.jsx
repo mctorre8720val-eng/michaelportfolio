@@ -25,7 +25,6 @@ export default function Hero() {
     <section className="hero" id="home">
       <div className="hero-container">
 
-        {/* LEFT SIDE */}
         <div className="hero-text">
 
           <h2>
@@ -36,10 +35,8 @@ export default function Hero() {
           <h5 className="subtitle">BSIT Student | Web & Android Developer</h5>
 
           <p className="description">
-           I build responsive web applications using HTML, CSS, JavaScript, and React, with a focus on clean UI, scalable structure, and practical backend integration using Java and MySQL.
-          </p>
+I build responsive web applications using HTML, CSS, JavaScript, and React, with a strong focus on backend development and system integration using Java, MySQL, and Android Studio.          </p>
 
-          {/* LANGUAGES & TOOLS */}
           <div className="skills-block">
             <p className="skills-title">Languages & Tools</p>
 
@@ -100,7 +97,6 @@ export default function Hero() {
 
           <p className="contact-label">Contact me</p>
 
-          {/* SOCIALS */}
           <div className="social-icons">
             <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">
               <FaGithub size={26} />
@@ -115,7 +111,10 @@ export default function Hero() {
             </a>
           </div>
 
-          <button className="btn">PROJECTS</button>
+        <button
+        className="btn" onClick={() => {document.getElementById("about").scrollIntoView({ behavior: "smooth" });}}>
+          Learn more about Kel
+        </button>
         </div>
 
         {/* RIGHT SIDE */}
@@ -123,7 +122,7 @@ export default function Hero() {
           <img src={profile} alt="profile" />
         <span className="wave">👋</span>
         </div>
-
+        
 
       </div>
     </section>
