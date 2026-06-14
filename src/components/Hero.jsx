@@ -24,24 +24,30 @@ export default function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-container">
+        
+        {/* LEFT SIDE: Image (Cleaned up inline padding to let CSS handle layouts) */}
+        <div className="hero-image">
+          <img src={profile} alt="profile" />
+          <span className="wave">👋</span>
+        </div>
 
+        {/* RIGHT SIDE: Text & Info (Removed paddingLeft "250px" so it looks stellar on iPhone viewports) */}
         <div className="hero-text">
-
           <h2>
-            HEY, I'M <span>KEL</span>
+            HELLO, I'M <span>KEL</span>
           </h2>
 
           <h5 className="subtitle">Aspiring Software Engineer</h5>
           <h5 className="subtitle">BSIT Student | Web & Android Developer</h5>
 
           <p className="description">
-I build responsive web applications using HTML, CSS, JavaScript, and React, with a strong focus on backend development and system integration using Java, MySQL, and Android Studio.          </p>
+            I build responsive web applications using HTML, CSS, JavaScript, and React, with a strong focus on backend development and system integration using Java, MySQL, and Android Studio.
+          </p>
 
           <div className="skills-block">
             <p className="skills-title">Languages & Tools</p>
 
             <div className="skills-grid">
-
               <div className="skill-item">
                 <FaHtml5 />
                 <span>HTML5</span>
@@ -91,7 +97,6 @@ I build responsive web applications using HTML, CSS, JavaScript, and React, with
                 <FaGithub />
                 <span>GitHub</span>
               </div>
-
             </div>
           </div>
 
@@ -111,18 +116,15 @@ I build responsive web applications using HTML, CSS, JavaScript, and React, with
             </a>
           </div>
 
-        <button
-        className="btn" onClick={() => {document.getElementById("about").scrollIntoView({ behavior: "smooth" });}}>
-          Learn more about Kel
-        </button>
+          <button
+            className="btn"
+            onClick={() => {
+              document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Learn more about Kel
+          </button>
         </div>
-
-        {/* RIGHT SIDE */}
-        <div className="hero-image">
-          <img src={profile} alt="profile" />
-        <span className="wave">👋</span>
-        </div>
-        
 
       </div>
     </section>
