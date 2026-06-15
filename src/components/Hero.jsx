@@ -10,6 +10,7 @@ import {
   FaJs,
   FaReact,
   FaJava,
+  FaNodeJs,
 } from "react-icons/fa";
 
 import {
@@ -17,31 +18,46 @@ import {
   SiMysql,
   SiVite,
   SiNpm,
-  SiPostman,
+  SiMongodb,
+  SiExpress,
+  SiKotlin,
+  SiAndroidstudio,
 } from "react-icons/si";
+
+// Imported from Devicons to fix the Vite export error cleanly
+import { DiVisualstudio } from "react-icons/di";
+
+import { MdVerified } from "react-icons/md";
 
 export default function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-container">
         
-        {/* LEFT SIDE: Image (Cleaned up inline padding to let CSS handle layouts) */}
+        {/* LEFT SIDE: Image */}
         <div className="hero-image">
           <img src={profile} alt="profile" />
           <span className="wave">👋</span>
         </div>
 
-        {/* RIGHT SIDE: Text & Info (Removed paddingLeft "250px" so it looks stellar on iPhone viewports) */}
+        {/* RIGHT SIDE: Text & Info */}
         <div className="hero-text">
-          <h2>
+          <h2 style={{ display: "inline-flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
             HELLO, I'M <span>KEL</span>
+            <MdVerified 
+              style={{ 
+                color: "var(--accent, #3b82f6)", 
+                fontSize: "1.8rem",
+                verticalAlign: "middle"
+              }} 
+            />
           </h2>
 
           <h5 className="subtitle">Aspiring Software Engineer</h5>
           <h5 className="subtitle">BSIT Student | Web & Android Developer</h5>
 
           <p className="description">
-            I build responsive web applications using HTML, CSS, JavaScript, and React, with a strong focus on backend development and system integration using Java, MySQL, and Android Studio.
+            I am a BSIT student specializing in Full-Stack development and IoT (Internet of Things) solutions. I build modern web and mobile applications using the MERN stack, while also diving into embedded systems. My hands-on experience includes writing firmware for microcontrollers like the ESP32 and Arduino, allowing me to bridge the gap between software development and hardware connectivity.
           </p>
 
           <div className="skills-block">
@@ -65,7 +81,22 @@ export default function Hero() {
 
               <div className="skill-item">
                 <FaReact />
-                <span>React</span>
+                <span>React.js</span>
+              </div>
+
+              <div className="skill-item">
+                <FaNodeJs />
+                <span>Node.js</span>
+              </div>
+
+              <div className="skill-item">
+                <SiExpress />
+                <span>Express.js</span>
+              </div>
+
+              <div className="skill-item">
+                <SiMongodb />
+                <span>MongoDB</span>
               </div>
 
               <div className="skill-item">
@@ -74,8 +105,23 @@ export default function Hero() {
               </div>
 
               <div className="skill-item">
+                <SiKotlin />
+                <span>Kotlin</span>
+              </div>
+
+              <div className="skill-item">
+                <SiAndroidstudio />
+                <span>Android Studio</span>
+              </div>
+
+              <div className="skill-item">
                 <SiMysql />
                 <span>MySQL</span>
+              </div>
+
+              <div className="skill-item">
+                <DiVisualstudio />
+                <span>VS Code</span>
               </div>
 
               <div className="skill-item">
@@ -86,11 +132,6 @@ export default function Hero() {
               <div className="skill-item">
                 <SiNpm />
                 <span>npm</span>
-              </div>
-
-              <div className="skill-item">
-                <SiPostman />
-                <span>Postman</span>
               </div>
 
               <div className="skill-item">

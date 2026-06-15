@@ -20,7 +20,7 @@ export default function Projects() {
     {
       title: "RehabCam",
       description: "RehabCam is a system designed to assist rehabilitation patients by using camera-based tracking to monitor movements and help ensure proper exercise form during recovery",
-      buttonText: "Check RehabCam",
+      buttonText: "Learn More about RehabCam",
       link: "#",
       icon: <FaVideo /> ,
       techStack: [
@@ -34,7 +34,7 @@ export default function Projects() {
     {
       title: "Clinic Room Reservation System",
       description: "A desktop application built using Java Swing (NetBeans) that manages clinic room availability and reservations, with a UI system for handling room status.",
-      buttonText: "Get Clinic Room Reservation System",
+      buttonText: "Learn More about Clinic Room Reservation System",
       link: "#",
       icon: <FaClinicMedical /> ,
       techStack: [
@@ -46,7 +46,7 @@ export default function Projects() {
     {
       title: "OLFU Library System",
       description: "A library management system developed for OLFU that helps manage book records, borrowing/returning processes, and user transactions efficiently.",
-      buttonText: "Get OLFU Library System",
+      buttonText: "Learn More about OLFU Library System",
       link: "#",
       icon: <FaBookReader />,
       techStack: [
@@ -72,23 +72,23 @@ export default function Projects() {
     },
     projectRow: {
       display: "flex",
-      flexWrap: "wrap", // Crucial: Allows the text content to stack below icons on mobile
+      flexWrap: "wrap", 
       alignItems: "center",
-      gap: "30px", // Snug grid spacing for alignment
+      gap: "30px", 
       padding: "40px 0",
       borderBottom: "1px solid var(--border-secondary)",
     },
     iconContainer: {
-      flex: "1 1 120px", // Fluid growth behavior on mobile
+      flex: "1 1 120px", 
       display: "flex",
-      justifyContent: "flex-start", // Left-aligned cleanly on mobile viewports
+      justifyContent: "center",
       alignItems: "center",
       fontSize: "3.5rem", 
       height: "auto",
       color: "var(--accent)", 
     },
     contentContainer: {
-      flex: "1 1 340px", // Keeps container snapping readable down to 340px widths
+      flex: "1 1 340px", 
       width: "100%",
     },
     projectTitle: {
@@ -120,7 +120,6 @@ export default function Projects() {
   };
 
   return (
-    /* Removed the disruptive padding clamp to inherit responsive layouts naturally */
     <section id="projects">
       <h2 style={styles.heading}>Projects</h2>
       <h3 style={styles.subHeading}>

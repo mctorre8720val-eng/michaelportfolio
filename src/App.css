@@ -35,6 +35,23 @@ body {
 }
 
 /* =========================
+   SCROLL INTERSECTION ANIMATION
+========================= */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+/* =========================
    NAVBAR
 ========================= */
 nav {
@@ -98,6 +115,9 @@ nav a:hover {
   font-size: 52px;
   font-weight: 800;
   line-height: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .hero-text span {
@@ -130,6 +150,7 @@ nav a:hover {
   flex: 1;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .hero-image img {
@@ -310,6 +331,19 @@ section {
   background: var(--bg-secondary);
 }
 
+/* ====================================
+   DESKTOP OPTIMIZATION BREAKPOINT (>= 1025px)
+==================================== */
+@media (min-width: 1025px) {
+  nav,
+  .hero,
+  #about,
+  #projects {
+    padding-left: 370px;
+    padding-right: 330px;
+  }
+}
+
 #about::before,
 #projects::before,
 #contact::before {
@@ -424,176 +458,58 @@ footer {
    TABLET RESPONSIVENESS
 ========================= */
 @media (max-width: 900px) {
-  nav {
-    padding: 20px 30px;
-  }
-
-  section {
-    padding: 60px 30px;
-  }
-
-  .hero {
-    padding: 40px 30px;
-  }
-
-  .hero-container {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .hero-text h2 {
-    font-size: 42px;
-  }
-
-  .description {
-    margin: 15px auto;
-  }
-
-  .social-icons,
-  .tech-icons,
-  .skills-grid {
-    justify-content: center;
-  }
-
-  .about-icons {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  }
+  nav { padding: 20px 30px; }
+  section { padding: 60px 30px; }
+  .hero { padding: 40px 30px; }
+  .hero-container { flex-direction: column-reverse; text-align: center; }
+  .hero-text h2 { font-size: 42px; justify-content: center; }
+  .description { margin: 15px auto; }
+  .social-icons, .tech-icons, .skills-grid { justify-content: center; }
+  .about-icons { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 }
 
 /* =========================
    MOBILE RESPONSIVENESS
 ========================= */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 12px;
-    padding: 16px 20px;
-  }
-
-  nav ul {
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  section {
-    padding: 60px 20px;
-  }
-
-  .hero {
-    padding: 50px 20px;
-    min-height: auto;
-  }
-
-  .hero-text h2 {
-    font-size: 34px;
-  }
-
-  .hero-image img {
-    width: 260px;
-    height: 260px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-icons {
-    grid-template-columns: 1fr;
-  }
-
-  .about-icons div {
-    justify-content: center;
-    text-align: center;
-  }
+  nav { flex-direction: column; gap: 12px; padding: 16px 20px; }
+  nav ul { gap: 16px; flex-wrap: wrap; justify-content: center; }
+  section { padding: 60px 20px; }
+  .hero { padding: 50px 20px; min-height: auto; }
+  .hero-text h2 { font-size: 34px; }
+  .hero-image img { width: 260px; height: 260px; }
+  .grid { grid-template-columns: 1fr; }
+  .about-icons { grid-template-columns: 1fr; }
+  .about-icons div { justify-content: center; text-align: center; }
 }
 
 /* =========================
    SMALL MOBILE BREAKPOINT
 ========================= */
 @media (max-width: 480px) {
-  .hero-text h2 {
-    font-size: 28px;
-  }
-
-  .hero-image img {
-    width: 220px;
-    height: 220px;
-  }
-
-  .wave {
-    font-size: 2rem;
-  }
-
-  .skill-item {
-    font-size: 12px;
-  }
-
-  .about-icons div {
-    font-size: 12px;
-    padding: 8px 10px;
-  }
-
-  .about-icons svg {
-    font-size: 14px;
-  }
+  .hero-text h2 { font-size: 28px; }
+  .hero-image img { width: 220px; height: 220px; }
+  .wave { font-size: 2rem; }
+  .skill-item { font-size: 12px; }
+  .about-icons div { font-size: 12px; padding: 8px 10px; }
+  .about-icons svg { font-size: 14px; }
 }
 
 /* ====================================
    IPHONE 14 PRO MAX SPECIFIC OPTIMIZATION
-   Targets 430px Viewport Sizes cleanly
 ==================================== */
 @media (max-width: 440px) {
-  /* Guard landscape notch orientation */
   html, body {
     padding-left: env(safe-area-inset-left, 0px);
     padding-right: env(safe-area-inset-right, 0px);
   }
-
-  /* Elegant padding distribution for larger screen estate */
-  section, .hero {
-    padding: 50px 20px;
-  }
-
-  /* Optimized title typography sizing for 430px */
-  .hero-text h2 {
-    font-size: 31px;
-    line-height: 1.25;
-  }
-
-  /* Upscaled avatar sizing perfectly suited for Pro Max dimensions */
-  .hero-image img {
-    width: 240px;
-    height: 240px;
-    border-radius: 26% / 21%;
-  }
-
-  /* Balanced wave icon proportion scale */
-  .wave {
-    font-size: 2.2rem;
-  }
-
-  /* Clean nav alignments */
-  nav {
-    padding: 16px 20px;
-  }
-
-  nav ul {
-    gap: 14px;
-  }
-
-  nav a {
-    font-size: 14px;
-  }
-
-  /* Ensure card grids & custom tags maintain pristine item grid ratios */
-  .skill-item {
-    padding: 7px 11px;
-    font-size: 12px;
-  }
-
-  .about-icons div {
-    font-size: 13px;
-    padding: 9px 11px;
-  }
+  section, .hero { padding: 50px 20px; }
+  .hero-text h2 { font-size: 31px; line-height: 1.25; }
+  .hero-image img { width: 240px; height: 240px; border-radius: 26% / 21%; }
+  .wave { font-size: 2.2rem; }
+  nav { padding: 16px 20px; }
+  nav ul { gap: 14px; }
+  nav a { font-size: 14px; }
+  .skill-item { padding: 7px 11px; font-size: 12px; }
+  .about-icons div { font-size: 13px; padding: 9px 11px; }
 }

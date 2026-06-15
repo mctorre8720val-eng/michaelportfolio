@@ -31,7 +31,8 @@ export default function About() {
   return (
     <section id="about">
       <h2 style={styles.heading}>About Me</h2>
-
+      <p>in this section, you will learn about me, my journey as a BSIT student</p>    
+      
       {/* Two-Column Wrapper governed by CSS structure */}
       <div className="about-container" style={{ display: "flex", flexWrap: "wrap", gap: "30px", alignItems: "flex-start" }}>
         
