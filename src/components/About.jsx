@@ -42,7 +42,6 @@ export default function About() {
           <div className="about-icons">
             <div><FaGraduationCap /> <span>BSIT Student</span></div>
             <div><FaSchool /> <span>Our Lady of Fatima University</span></div>
-            <div><FaHeart /> <span>Married to Mae</span></div>
             <div><FaLaptopCode /> <span>Backend Developer</span></div>
             <div><FaDatabase /> <span>Database & APIs</span></div>
             <div><FaProjectDiagram /> <span>System Design</span></div>
