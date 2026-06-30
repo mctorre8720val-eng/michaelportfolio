@@ -5,23 +5,45 @@ import {
   FaAndroid, 
   FaJava, 
   FaDatabase, 
-  FaGithub
-} from "react-icons/fa"; 
+  FaGithub,
+  FaSchool
+} from "react-icons/fa";
+
+import {
+  FaReact,
+  FaNodeJs
+} from "react-icons/fa6";
 
 import { 
   SiOpencv, 
   SiMysql,
   SiPhp,
-  SiXampp
+  SiXampp,
+  SiFirebase,
+  SiExpress,
 } from "react-icons/si";
 
 export default function Projects() {
   const projectData = [
     {
+  title: "Dormly",
+  description: "Dormly is a dormitory rating and discovery platform designed to help students find, compare, and share experiences about dormitories through reviews and ratings.",
+  buttonText: "Learn More about Dormly",
+  link: "#",
+  icon: <FaSchool />,
+  techStack: [
+    { name: "React", icon: <FaReact /> },
+    { name: "Node.js", icon: <FaNodeJs /> },
+    { name: "Express", icon: <SiExpress /> },
+    { name: "Firebase", icon: <SiFirebase /> },
+    { name: "GitHub", icon: <FaGithub /> },
+  ]
+},
+    {
       title: "RehabCam",
       description: "RehabCam is a system designed to assist rehabilitation patients by using camera-based tracking to monitor movements and help ensure proper exercise form during recovery",
-      buttonText: "Learn More about RehabCam",
-      link: "#",
+      buttonText: "Learn More about RehabCam (WIP)",
+      link: "https://dormly-nu.vercel.app/",
       icon: <FaVideo /> ,
       techStack: [
         { name: "Android", icon: <FaAndroid /> },

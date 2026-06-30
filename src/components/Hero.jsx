@@ -144,15 +144,15 @@ export default function Hero() {
           <p className="contact-label">Contact me</p>
 
           <div className="social-icons">
-            <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">
+            <a href="https://github.com/mctorre8720val-eng" target="_blank" rel="noreferrer">
               <FaGithub size={26} />
             </a>
 
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer">
+            <a href="#" target="_blank" rel="noreferrer">
               <FaLinkedin size={26} />
             </a>
 
-            <a href="mailto:yourgmail@gmail.com">
+            <a href="#">
               <SiGmail size={26} />
             </a>
           </div>
