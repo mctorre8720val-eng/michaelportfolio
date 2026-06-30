@@ -24,7 +24,6 @@ import {
   SiAndroidstudio,
 } from "react-icons/si";
 
-// Imported from Devicons to fix the Vite export error cleanly
 import { DiVisualstudio } from "react-icons/di";
 
 import { MdVerified } from "react-icons/md";

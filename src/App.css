@@ -591,9 +591,7 @@ footer {
   .about-icons svg { font-size: 14px; }
 }
 
-/* ====================================
-   IPHONE 14 PRO MAX SPECIFIC OPTIMIZATION
-==================================== */
+
 @media (max-width: 440px) {
 
   html,

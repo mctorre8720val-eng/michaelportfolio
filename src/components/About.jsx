@@ -33,12 +33,9 @@ export default function About() {
       <h2 style={styles.heading}>About Me</h2>
       <p>in this section, you will learn about me, my journey as a BSIT student</p>    
       
-      {/* Two-Column Wrapper governed by CSS structure */}
       <div className="about-container" style={{ display: "flex", flexWrap: "wrap", gap: "30px", alignItems: "flex-start" }}>
         
-        {/* LEFT COLUMN: Quick Stats. Uses flex-basis so it drops down naturally on mobile */}
         <div className="about-sidebar" style={{ flex: "1 1 280px", width: "100%" }}>
-          {/* Re-aligned about-icons setup to play well with your existing grid media queries */}
           <div className="about-icons">
             <div><FaGraduationCap /> <span>BSIT Student</span></div>
             <div><FaSchool /> <span>Our Lady of Fatima University</span></div>
@@ -49,7 +46,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN: Professional Narrative */}
         <div className="about-main" style={{ flex: "1 1 400px", width: "100%" }}>
           <div className="card" style={styles.highlightCard}>
           <p style={styles.bioText}>
