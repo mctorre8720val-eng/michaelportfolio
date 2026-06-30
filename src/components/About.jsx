@@ -52,17 +52,17 @@ export default function About() {
         {/* RIGHT COLUMN: Professional Narrative */}
         <div className="about-main" style={{ flex: "1 1 400px", width: "100%" }}>
           <div className="card" style={styles.highlightCard}>
-            <p style={styles.bioText}>
-              Hi! <strong>I'm Kel</strong>, a fourth-year Information Technology student with a passion for building software that solves real-world problems.
-            </p>
+          <p style={styles.bioText}>
+            Hi! <strong>I'm Kel</strong>, a fourth-year Information Technology student who enjoys creating software and exploring new technologies.
+          </p>
 
-            <p style={styles.bioText}>
-              My interest in programming started when my family bought our first computer while I was in grade school. What began as simple curiosity—exploring software, playing games, and wondering how everything worked—eventually grew into a passion for technology and software development.
-            </p>
+          <p style={styles.bioText}>
+            My journey in programming started when my family got our first computer while I was in grade school. What began as curiosity—exploring applications, playing games, and wondering how things worked—slowly grew into a passion for software development.
+          </p>
 
-            <p style={{ ...styles.bioText, marginBottom: "0px" }}>
-              Today, I enjoy building modern web and mobile applications that combine clean design with reliable functionality. Through academic and personal projects, I've gained hands-on experience with <strong>React</strong>, <strong>Node.js</strong>, <strong>Express</strong>, <strong>Flutter</strong>, <strong>Java</strong>, and <strong>MySQL</strong>. Technology is constantly evolving, and I enjoy learning alongside it. Whether I'm building applications or exploring emerging technologies like artificial intelligence, I'm always looking for opportunities to grow as a developer and create software that makes a positive impact.
-            </p>
+          <p style={{ ...styles.bioText, marginBottom: "0px" }}>
+            Over the years, I’ve worked on various academic and personal projects, gaining experience in building web and mobile applications using <strong>React</strong>, <strong>Node.js</strong>, <strong>Express</strong>, <strong>Flutter</strong>, <strong>Android Studio</strong>, and <strong>MySQL</strong>. I enjoy combining clean design with functional solutions and continuously learning new tools and technologies. Whether I’m developing applications or exploring emerging fields like artificial intelligence, I’m always looking for ways to improve and create meaningful digital experiences.
+          </p>
           </div>
         </div>
 
