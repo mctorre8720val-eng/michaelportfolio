@@ -53,13 +53,15 @@ export default function About() {
         <div className="about-main" style={{ flex: "1 1 400px", width: "100%" }}>
           <div className="card" style={styles.highlightCard}>
             <p style={styles.bioText}>
-              I'm <strong>Kel</strong>, an aspiring Software Engineer currently pursuing my BSIT degree. 
-              I sit at the intersection of frontend elegance and robust backend logic—passionate about creating responsive, user-focused web and mobile interfaces that combine strict functionality with clean design architecture.
+              Hi! <strong>I'm Kel</strong>, a fourth-year Information Technology student with a passion for building software that solves real-world problems.
             </p>
+
+            <p style={styles.bioText}>
+              My interest in programming started when my family bought our first computer while I was in grade school. What began as simple curiosity—exploring software, playing games, and wondering how everything worked—eventually grew into a passion for technology and software development.
+            </p>
+
             <p style={{ ...styles.bioText, marginBottom: "0px" }}>
-              Through academic projects and continuous personal engineering, I have honed deep, practical skillsets managing 
-              {" "}<strong>React architectures</strong>, native <strong>Java environments</strong>, and relational systems like <strong>MySQL</strong>. 
-              I am highly focused on building clean system integrations, tracking application states smoothly, and engineering intuitive digital solutions.
+              Today, I enjoy building modern web and mobile applications that combine clean design with reliable functionality. Through academic and personal projects, I've gained hands-on experience with <strong>React</strong>, <strong>Node.js</strong>, <strong>Express</strong>, <strong>Flutter</strong>, <strong>Java</strong>, and <strong>MySQL</strong>. Technology is constantly evolving, and I enjoy learning alongside it. Whether I'm building applications or exploring emerging technologies like artificial intelligence, I'm always looking for opportunities to grow as a developer and create software that makes a positive impact.
             </p>
           </div>
         </div>

@@ -76,7 +76,7 @@ export default function Loader({ finishLoading }) {
             duration: 0.6,
           }}
         >
-          Full Stack Developer
+          React • Vite • Node.js • Express • Flutter • MongoDB • Prisma • Git • Docker • Vercel
         </motion.p>
       </div>
     </motion.div>

@@ -53,11 +53,11 @@ export default function Hero() {
             />
           </h2>
 
-          <h5 className="subtitle">Aspiring Software Engineer/LLM Engineer</h5>
+          <h5 className="subtitle">Software Engineer | Aspiring LLM Engineer</h5>
           <h5 className="subtitle">BSIT Student | Web & Android Developer</h5>
 
           <p className="description">
-            I am a BSIT student specializing in Full-Stack development and IoT (Internet of Things) solutions. I build modern web and mobile applications using the MERN stack, while also diving into embedded systems. My hands-on experience includes writing firmware for microcontrollers like the ESP32 and Arduino, allowing me to bridge the gap between software development and hardware connectivity.
+            BSIT student specializing in Full-Stack development and IoT (Internet of Things) solutions. I build modern web and mobile applications using the MERN stack, while also diving into embedded systems. My hands-on experience includes writing firmware for microcontrollers like the ESP32 and Arduino, allowing me to bridge the gap between software development and hardware connectivity.
           </p>
 
           <div className="skills-block">
