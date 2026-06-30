@@ -1,3 +1,6 @@
+import { useState } from "react";
+
+import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -7,16 +10,22 @@ import Footer from "./components/Footer";
 import FadeInSection from "./components/FadeInSection";
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
+
+  if (loading) {
+    return (
+      <Loader finishLoading={() => setLoading(false)} />
+    );
+  }
+
   return (
     <>
       <Navbar />
-      
-      {/* Hero fades in instantly upon page load */}
+
       <FadeInSection>
         <Hero />
       </FadeInSection>
 
-      {/* These sections fade in dynamically as you scroll down */}
       <FadeInSection>
         <About />
       </FadeInSection>
