@@ -53,7 +53,7 @@ export default function Hero() {
             />
           </h2>
 
-          <h5 className="subtitle">Aspiring Software Engineer</h5>
+          <h5 className="subtitle">Aspiring Software Engineer/LLM Engineer</h5>
           <h5 className="subtitle">BSIT Student | Web & Android Developer</h5>
 
           <p className="description">
