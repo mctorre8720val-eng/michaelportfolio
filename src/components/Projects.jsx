@@ -28,8 +28,8 @@ export default function Projects() {
     {
   title: "Dormly",
   description: "Dormly is a dormitory rating and discovery platform designed to help students find, compare, and share experiences about dormitories through reviews and ratings.",
-  buttonText: "Learn More about Dormly",
-  link: "#",
+  buttonText: "Learn More about Dormly (WIP)",
+  link: "https://dormly-nu.vercel.app/",
   icon: <FaSchool />,
   techStack: [
     { name: "React", icon: <FaReact /> },
@@ -42,8 +42,8 @@ export default function Projects() {
     {
       title: "RehabCam",
       description: "RehabCam is a system designed to assist rehabilitation patients by using camera-based tracking to monitor movements and help ensure proper exercise form during recovery",
-      buttonText: "Learn More about RehabCam (WIP)",
-      link: "https://dormly-nu.vercel.app/",
+      buttonText: "Learn More about RehabCam",
+      link: "#",
       icon: <FaVideo /> ,
       techStack: [
         { name: "Android", icon: <FaAndroid /> },
