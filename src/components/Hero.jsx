@@ -131,6 +131,11 @@ export default function Hero() {
                 <FaGithub />
                 <span>GitHub</span>
               </div>
+
+              <div className="skill-item">
+                <SiFirebase />
+                <span>Firebase</span>
+              </div>
             </div>
           </div>
 
