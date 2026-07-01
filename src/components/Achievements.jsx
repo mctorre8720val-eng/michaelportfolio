@@ -21,13 +21,13 @@ const achievements = [
     skills: ["Python", "Logic", "Algorithms", "Automation"],
   },
   {
-    title: "Programming Essentials in C",
+    title: "Programming Essentials in Python",
     issuer: "Cisco Networking Academy",
     date: "2026",
     image: "/PE2.png",
     description:
-      "Built a solid understanding of structured programming, memory management, and low-level problem solving in C.",
-    skills: ["C", "Programming", "Memory", "Problem Solving"],
+      "Built a solid understanding of structured programming, memory management, and low-level problem solving in Python.",
+    skills: ["Python", "Programming", "Memory", "Problem Solving"],
   },
   {
     title: "Endpoint Security",
