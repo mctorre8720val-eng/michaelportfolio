@@ -1,128 +1,181 @@
-import { 
-  FaVideo, 
-  FaClinicMedical, 
-  FaBookReader, 
-  FaAndroid, 
-  FaJava, 
-  FaDatabase, 
-  FaGithub,
-  FaSchool
-} from "react-icons/fa";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import "../styles/Projects.css";
 
-import {
-  FaReact,
-  FaNodeJs
-} from "react-icons/fa6";
-
-import { 
-  SiOpencv, 
-  SiMysql,
-  SiPhp,
-  SiXampp,
-  SiFirebase,
-  SiExpress,
-} from "react-icons/si";
+const projects = [
+  {
+    title: "Dormly",
+    description:
+      "A dormitory discovery and review platform helping students compare living spaces with confidence.",
+    screenshots: ["/Dormly.png", "/Dormly1.png", "/Dormly2.png"],
+    techStack: ["React", "Node.js", "Express", "MySQL", "Prisma", "Supabase", "Postman", "Git", "Docker"],
+    github: "https://github.com/",
+    live: "https://dormly-nu.vercel.app/",
+  },
+  {
+    title: "DevTrack",
+    description:
+      "A productivity workspace for managing development tasks, sprints, and personal progress in one place.",
+    screenshots: ["/DevTrack.png","/DevTrack1.png","/DevTrack2.png"],
+    techStack: ["React", "TypeScript", "Firebase", "Tailwind", "Git"],
+    github: "https://github.com/",
+    live: "#",
+  },
+  {
+    title: "ScentGuard",
+    description:
+      "An IoT-inspired concept project focused on intelligent ambient sensing and modern interface design.",
+    screenshots: ["/ScentGuard.png"],
+    techStack: ["Arduino", "ESP32", "Python", "Node.js", "MQTT"],
+    github: "https://github.com/",
+    live: "#",
+  },
+  {
+    title: "Clinic Reservation",
+    description:
+      "A reservation workflow for clinic rooms with clear scheduling and a polished desktop experience.",
+    screenshots: ["/ClinicReservation.png"],
+    techStack: ["Java", "Swing", "MySQL", "XAMPP", "NetBeans"],
+    github: "https://github.com/",
+    live: "#",
+  },
+];
 
 export default function Projects() {
-  const projectData = [
-    {
-  title: "Dormly",
-  description: "Dormly is a dormitory rating and discovery platform designed to help students find, compare, and share experiences about dormitories through reviews and ratings.",
-  buttonText: "Learn More about Dormly (WIP)",
-  link: "https://dormly-nu.vercel.app/",
-  icon: <FaSchool />,
-  techStack: [
-    { name: "React", icon: <FaReact /> },
-    { name: "Node.js", icon: <FaNodeJs /> },
-    { name: "Express", icon: <SiExpress /> },
-    { name: "Firebase", icon: <SiFirebase /> },
-    { name: "GitHub", icon: <FaGithub /> },
-  ]
-},
-    {
-      title: "RehabCam",
-      description: "RehabCam is a system designed to assist rehabilitation patients by using camera-based tracking to monitor movements and help ensure proper exercise form during recovery",
-      buttonText: "Learn More about RehabCam",
-      link: "#",
-      icon: <FaVideo /> ,
-      techStack: [
-        { name: "Android", icon: <FaAndroid /> },
-        { name: "Java", icon: <FaJava /> },
-        { name: "OpenCV", icon: <SiOpencv /> },
-        { name: "MySQL", icon: <FaDatabase /> },
-        { name: "GitHub", icon: <FaGithub /> },
-      ]
-    },
-    {
-      title: "Clinic Room Reservation System",
-      description: "A desktop application built using Java Swing (NetBeans) that manages clinic room availability and reservations, with a UI system for handling room status.",
-      buttonText: "Learn More about Clinic Room Reservation System",
-      link: "#",
-      icon: <FaClinicMedical /> ,
-      techStack: [
-        { name: "Java Swing", icon: <FaJava /> },
-        { name: "MySQL", icon: <SiMysql /> },
-        { name: "XAMPP", icon: <SiXampp /> },
-      ]
-    },
-    {
-      title: "OLFU Library System",
-      description: "A library management system developed for OLFU that helps manage book records, borrowing/returning processes, and user transactions efficiently.",
-      buttonText: "Learn More about OLFU Library System",
-      link: "#",
-      icon: <FaBookReader />,
-      techStack: [
-        { name: "PHP", icon: <SiPhp /> },
-        { name: "MySQL", icon: <SiMysql /> },
-        { name: "GitHub", icon: <FaGithub /> },
-      ]
-    }
-  ];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const currentProject = projects[activeIndex];
+
+  const showPrev = () => {
+    const nextIndex = (activeIndex - 1 + projects.length) % projects.length;
+    setActiveIndex(nextIndex);
+    setImageIndex(0);
+  };
+
+  const showNext = () => {
+    const nextIndex = (activeIndex + 1) % projects.length;
+    setActiveIndex(nextIndex);
+    setImageIndex(0);
+  };
+
+  const goToProject = (index) => {
+    setActiveIndex(index);
+    setImageIndex(0);
+  };
+
+  const showPrevImage = () => {
+    const next = (imageIndex - 1 + currentProject.screenshots.length) % currentProject.screenshots.length;
+    setImageIndex(next);
+  };
+
+  const showNextImage = () => {
+    const next = (imageIndex + 1) % currentProject.screenshots.length;
+    setImageIndex(next);
+  };
 
   return (
     <section id="projects">
-      <h2 className="project-heading">Projects</h2>
-      <h3 className="project-subheading">
-         A collection of projects built using my skills, languages, and tools.
-      </h3>
+      <div className="section-heading project-section-heading">
+        <p className="eyebrow">Selected work</p>
+        <h2>Featured Projects</h2>
+        <p className="section-copy">
+          A curated showcase of projects I’ve built with a modern UI, strong engineering choices, and a focus on real-world use cases.
+        </p>
+      </div>
 
-      <div className="project-list">
-        {projectData.map((project, index) => (
-          <div key={index} className="project-row">
-            <div className="project-icon-box">
-              {project.icon}
+      <div className="featured-showcase">
+        <motion.div
+          className="featured-preview"
+          key={currentProject.title}
+          initial={{ opacity: 0, x: 24 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -24 }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
+        >
+          <div className="preview-frame">
+            <div className="preview-toolbar">
+              <span />
+              <span />
+              <span />
             </div>
 
-            <div className="project-content">
-              <h4 className="project-title">{project.title}</h4>
-              <p className="project-description">{project.description}</p>
-              
-              {project.techStack && project.techStack.length > 0 && (
-                <div className="project-tech-list">
-                  {project.techStack.map((tech, techIndex) => (
-                    <span 
-                      key={techIndex} 
-                      className="project-tech-item"
-                    >
-                      <span className="project-tech-icon">
-                        {tech.icon}
-                      </span>
-                      {tech.name}
-                    </span>
-                  ))}
-                </div>
-              )}
+            <div className="preview-image-shell">
+              <motion.img
+                key={`${currentProject.title}-${imageIndex}`}
+                src={currentProject.screenshots[imageIndex]}
+                alt={`${currentProject.title} screenshot ${imageIndex + 1}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.25 }}
+              />
+            </div>
 
-              <a 
-                href={project.link} 
-                className="project-link"
-              >
-                {project.buttonText}
-              </a>
+            {currentProject.screenshots.length > 1 ? (
+              <div className="preview-controls">
+                <button type="button" className="preview-arrow" onClick={showPrevImage} aria-label="Previous screenshot">
+                  ←
+                </button>
+                <span className="preview-counter">
+                  {imageIndex + 1}/{currentProject.screenshots.length}
+                </span>
+                <button type="button" className="preview-arrow" onClick={showNextImage} aria-label="Next screenshot">
+                  →
+                </button>
+              </div>
+            ) : null}
+          </div>
+
+          <div className="featured-content">
+            <p className="featured-label">Featured Project</p>
+            <h3>{currentProject.title}</h3>
+            <p className="featured-description">{currentProject.description}</p>
+
+            <div className="tech-stack">
+              {currentProject.techStack.map((tech) => (
+                <span key={tech} className="tech-chip">
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="project-actions">
+              {currentProject.github ? (
+                <a href={currentProject.github} className="project-link" target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+              ) : null}
+              {currentProject.live ? (
+                <a href={currentProject.live} className="project-link secondary" target="_blank" rel="noreferrer">
+                  Live Demo
+                </a>
+              ) : null}
             </div>
           </div>
-        ))}
+        </motion.div>
+
+        <div className="project-controls">
+          <div className="project-nav-buttons">
+            <button type="button" className="nav-button" onClick={showPrev} aria-label="Previous project">
+              ← Prev
+            </button>
+            <button type="button" className="nav-button" onClick={showNext} aria-label="Next project">
+              Next →
+            </button>
+          </div>
+
+          <div className="pagination-dots" role="tablist" aria-label="Project selection">
+            {projects.map((project, index) => (
+              <button
+                key={project.title}
+                type="button"
+                className={`dot ${index === activeIndex ? "active" : ""}`}
+                onClick={() => goToProject(index)}
+                aria-label={`Show ${project.title}`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

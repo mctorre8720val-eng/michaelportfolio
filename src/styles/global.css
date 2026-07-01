@@ -24,13 +24,22 @@ html {
 }
 
 body {
-  background: #ffffff;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef4ff 100%);
   color: var(--primary);
   overflow-x: hidden;
 }
 
 section {
   padding: 80px;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+a {
+  font: inherit;
 }
 
 .card {
