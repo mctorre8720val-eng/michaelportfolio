@@ -21,6 +21,7 @@ import {
   SiExpress,
   SiKotlin,
   SiAndroidstudio,
+  SiFirebase
 } from "react-icons/si";
 
 import { DiVisualstudio } from "react-icons/di";
