@@ -3,7 +3,7 @@ import { FaDownload } from "react-icons/fa";
 export default function Navbar() {
   return (
     <nav>
-      {/* Natively inherits responsive desktop alignment classes from your CSS style sheet */}
+      
       <div className="logo" style={{ fontSize: "24px", fontWeight: "bold" }} >
         <span style={{ color: "#3b82f6" }}>SWE</span> Michael
       </div>
@@ -12,8 +12,9 @@ export default function Navbar() {
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
         <li><a href="#contact">Contact</a></li>
-        {/* Overrode the global .btn { margin-top: 25px } inline to keep vertical layout alignment */}
+        
         <li>
           <a 
             href="/resume.pdf" 

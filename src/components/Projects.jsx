@@ -157,12 +157,10 @@ export default function Projects() {
               borderBottom: index === projectData.length - 1 ? "none" : styles.projectRow.borderBottom 
             }}
           >
-            {/* Left Column - Icon Box */}
             <div className="project-icon-box" style={styles.iconContainer}>
               {project.icon}
             </div>
 
-            {/* Right Column - Data Content */}
             <div style={styles.contentContainer}>
               <h4 style={styles.projectTitle}>{project.title}</h4>
               <p style={styles.projectDescription}>{project.description}</p>
