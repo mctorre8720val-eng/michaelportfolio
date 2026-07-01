@@ -1,0 +1,7 @@
+#contact {
+  background: var(--bg-primary);
+}
+
+.contact-card {
+  max-width: 560px;
+}

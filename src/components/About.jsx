@@ -4,38 +4,19 @@ import {
   FaDatabase, 
   FaProjectDiagram, 
   FaMapMarkerAlt,
-  FaSchool,
-  FaHeart
+  FaSchool
 } from "react-icons/fa";
+import "../styles/About.css";
 
 export default function About() {
-  const styles = {
-    heading: {
-      fontSize: "2.5rem",
-      fontWeight: "800",
-      marginBottom: "30px",
-      textAlign: "left", 
-    },
-    bioText: {
-      lineHeight: "1.8",
-      fontSize: "1.05rem",
-      color: "#d1d5db",
-      marginBottom: "20px",
-    },
-    highlightCard: {
-      marginTop: "0", 
-      padding: "24px",
-    }
-  };
-
   return (
     <section id="about">
-      <h2 style={styles.heading}>About Me</h2>
+      <h2 className="about-heading">About Me</h2>
       <p>in this section, you will learn about me, my journey as a BSIT student</p>    
       
-      <div className="about-container" style={{ display: "flex", flexWrap: "wrap", gap: "30px", alignItems: "flex-start" }}>
+      <div className="about-container">
         
-        <div className="about-sidebar" style={{ flex: "1 1 280px", width: "100%" }}>
+        <div className="about-sidebar">
           <div className="about-icons">
             <div><FaGraduationCap /> <span>BSIT Student</span></div>
             <div><FaSchool /> <span>Our Lady of Fatima University</span></div>
@@ -46,17 +27,17 @@ export default function About() {
           </div>
         </div>
 
-        <div className="about-main" style={{ flex: "1 1 400px", width: "100%" }}>
-          <div className="card" style={styles.highlightCard}>
-          <p style={styles.bioText}>
+        <div className="about-main">
+          <div className="card about-highlight-card">
+          <p className="about-bio-text">
             Hi! <strong>I'm Kel</strong>, a fourth-year Information Technology student who enjoys creating software and exploring new technologies.
           </p>
 
-          <p style={styles.bioText}>
+          <p className="about-bio-text">
             My journey in programming started when my family got our first computer while I was in grade school. What began as curiosity—exploring applications, playing games, and wondering how things worked—slowly grew into a passion for software development.
           </p>
 
-          <p style={{ ...styles.bioText, marginBottom: "0px" }}>
+          <p className="about-bio-text" style={{ marginBottom: "0px" }}>
             Over the years, I’ve worked on various academic and personal projects, gaining experience in building web and mobile applications using <strong>React</strong>, <strong>Node.js</strong>, <strong>Express</strong>, <strong>Flutter</strong>, <strong>Android Studio</strong>, and <strong>MySQL</strong>. I enjoy combining clean design with functional solutions and continuously learning new tools and technologies. Whether I’m developing applications or exploring emerging fields like artificial intelligence, I’m always looking for ways to improve and create meaningful digital experiences.
           </p>
           </div>

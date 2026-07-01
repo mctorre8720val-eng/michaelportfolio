@@ -1,4 +1,5 @@
 import { FaDownload } from "react-icons/fa";
+import "../styles/Navbar.css";
 
 export default function Navbar() {
   return (
@@ -19,15 +20,7 @@ export default function Navbar() {
           <a 
             href="/resume.pdf" 
             download="Michael_Resume.pdf" 
-            className="btn" 
-            style={{ 
-              marginTop: "0px", 
-              display: "inline-flex", 
-              alignItems: "center", 
-              justifyContent: "center",
-              gap: "8px",
-              textDecoration: "none" 
-            }}
+            className="btn nav-cta"
           >
             <span>Resume</span>
             <FaDownload size={14} style={{ display: "inline-block" }} />

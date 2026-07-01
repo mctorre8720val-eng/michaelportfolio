@@ -1,0 +1,132 @@
+#about,
+#projects,
+#contact {
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+#about,
+#contact {
+  background: var(--bg-primary);
+}
+
+#about::before,
+#projects::before,
+#contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(59, 130, 246, 0.12),
+    transparent 40%
+  );
+  pointer-events: none;
+}
+
+#about h2,
+#projects h2,
+#contact h2,
+#about h3,
+#projects h3,
+#contact h3 {
+  color: white;
+}
+
+#about p,
+#projects p,
+#contact p {
+  color: #d1d5db;
+}
+
+#about .card,
+#projects .card,
+#contact .card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border-secondary);
+  color: white;
+}
+
+#about .card p,
+#projects .card p,
+#contact .card p {
+  color: #d1d5db;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.about-sidebar {
+  flex: 1 1 280px;
+  width: 100%;
+}
+
+.about-main {
+  flex: 1 1 400px;
+  width: 100%;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.about-bio-text {
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #d1d5db;
+  margin-bottom: 20px;
+}
+
+.about-highlight-card {
+  margin-top: 0;
+  padding: 24px;
+}
+
+.about-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.about-icons div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-secondary);
+  color: #e5e7eb;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.about-icons svg {
+  color: var(--accent);
+  font-size: 16px;
+}
+
+.about-icons div:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.about-icons div span {
+  font-weight: 500;
+}
+
+#about .card p {
+  line-height: 1.8;
+  font-size: 15px;
+  color: #d1d5db;
+}

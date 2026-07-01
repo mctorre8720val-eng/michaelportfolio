@@ -1,6 +1,5 @@
 import profile from "../assets/profile.jpg";
-import Lottie from "lottie-react";
-import waveAnim from "../assets/greetings.json";
+import "../styles/Hero.css";
 
 import {
   FaGithub,
@@ -41,15 +40,9 @@ export default function Hero() {
 
         {/* RIGHT SIDE: Text & Info */}
         <div className="hero-text">
-          <h2 style={{ display: "inline-flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+          <h2 className="hero-title">
             HELLO, I'M <span>KEL</span>
-            <MdVerified 
-              style={{ 
-                color: "var(--accent, #3b82f6)", 
-                fontSize: "1.8rem",
-                verticalAlign: "middle"
-              }} 
-            />
+            <MdVerified className="hero-verified-icon" />
           </h2>
 
           <h5 className="subtitle">Software Engineer | Aspiring LLM Engineer</h5>

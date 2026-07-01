@@ -1,0 +1,213 @@
+@media (min-width: 1025px) {
+  nav,
+  .hero,
+  #about,
+  #projects {
+    padding-left: 370px;
+    padding-right: 330px;
+  }
+}
+
+@media (max-width: 900px) {
+  .loader h1 {
+    letter-spacing: 0.25rem;
+  }
+
+  .loader p {
+    letter-spacing: 0.12rem;
+  }
+
+  nav {
+    padding: 20px 30px;
+  }
+
+  section {
+    padding: 60px 30px;
+  }
+
+  .hero {
+    padding: 40px 30px;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 42px;
+    justify-content: center;
+  }
+
+  .description {
+    margin: 15px auto;
+  }
+
+  .social-icons,
+  .tech-icons,
+  .skills-grid {
+    justify-content: center;
+  }
+
+  .about-icons {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .loader {
+    padding: 20px;
+  }
+
+  .loader h1 {
+    letter-spacing: 0.18rem;
+  }
+
+  .loader p {
+    margin-top: 14px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  nav ul {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  .hero {
+    padding: 50px 20px;
+    min-height: auto;
+  }
+
+  .hero-text h2 {
+    font-size: 34px;
+  }
+
+  .hero-image img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-icons {
+    grid-template-columns: 1fr;
+  }
+
+  .about-icons div {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .loader h1 {
+    font-size: 2.6rem;
+    letter-spacing: 0.12rem;
+  }
+
+  .loader p {
+    font-size: 0.9rem;
+    letter-spacing: 0.08rem;
+  }
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .wave {
+    font-size: 2rem;
+  }
+
+  .skill-item {
+    font-size: 12px;
+  }
+
+  .about-icons div {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .about-icons svg {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 440px) {
+  html,
+  body {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+
+  .loader {
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+  }
+
+  .loader h1 {
+    font-size: 2.4rem;
+  }
+
+  .loader p {
+    font-size: 0.85rem;
+  }
+
+  section,
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 31px;
+    line-height: 1.25;
+  }
+
+  .hero-image img {
+    width: 240px;
+    height: 240px;
+    border-radius: 26% / 21%;
+  }
+
+  .wave {
+    font-size: 2.2rem;
+  }
+
+  nav {
+    padding: 16px 20px;
+  }
+
+  nav ul {
+    gap: 14px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .skill-item {
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+
+  .about-icons div {
+    font-size: 13px;
+    padding: 9px 11px;
+  }
+}

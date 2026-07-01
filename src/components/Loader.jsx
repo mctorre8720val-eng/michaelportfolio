@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import "../styles/Loader.css";
 
 export default function Loader({ finishLoading }) {
   useEffect(() => {
