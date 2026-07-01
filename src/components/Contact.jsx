@@ -4,39 +4,39 @@ import "../styles/Contact.css";
 
 const contactLinks = [
   {
+    label: "GitHub",
+    value: "github.com/mctorre",
+    href: "https://github.com/mctorre8720val-eng",
+    icon: FiGithub,
+  },
+  {
     label: "Email",
-    value: "kel.dev@email.com",
-    href: "mailto:kel.dev@email.com",
+    value: "walamuna@email.com",
+    href: "#",
     icon: FiMail,
     primary: true,
   },
   {
-    label: "GitHub",
-    value: "github.com/keldev",
-    href: "https://github.com/keldev",
-    icon: FiGithub,
-  },
-  {
     label: "LinkedIn",
-    value: "linkedin.com/in/keldev",
-    href: "https://linkedin.com/in/keldev",
+    value: "linkedin.com/in/walamuna",
+    href: "#",
     icon: FiLinkedin,
   },
   {
     label: "Facebook",
-    value: "facebook.com/keldev",
-    href: "https://facebook.com/keldev",
+    value: "facebook.com/walamuna",
+    href: "#",
     icon: FiFacebook,
   },
   {
     label: "Location",
-    value: "Cagayan de Oro, Philippines",
-    href: "https://maps.google.com/?q=Cagayan+de+Oro+Philippines",
+    value: "Quezon City, Metro Manila, Philippines",
+    href: "#",
     icon: FiMapPin,
   },
 ];
 
-const availabilityMessage = "Currently looking for Internship Opportunities";
+const availabilityMessage = "Currently looking for Internship Opportunities (Sample lang))";
 
 export default function Contact() {
   return (
@@ -57,13 +57,13 @@ export default function Contact() {
           </p>
 
           <div className="contact-actions">
-            <a href="mailto:kel.dev@email.com" className="contact-primary-btn">
+            <a href="#" className="contact-primary-btn">
               Send me an Email
             </a>
-            <a href="https://github.com/keldev" className="contact-secondary-btn">
+            <a href="https://github.com/mctorre8720val-eng" className="contact-secondary-btn">
               View GitHub
             </a>
-            <a href="https://linkedin.com/in/keldev" className="contact-secondary-btn">
+            <a href="#" className="contact-secondary-btn">
               Connect on LinkedIn
             </a>
           </div>
