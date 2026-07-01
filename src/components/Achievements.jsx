@@ -1,63 +1,46 @@
-import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import ImageModal from "./ImageModal";
 import "../styles/Achievements.css";
 
 const achievements = [
   {
-    title: "Cisco Certified Network Associate",
-    issuer: "Cisco",
-    date: "2025",
+    title: "CCNA: Introduction to Networks",
+    issuer: "Cisco Networking Academy",
+    date: "2026",
     image: "/CCNA Introduction to Networks.png",
+    description:
+      "A strong foundation in networking concepts, IP connectivity, routing fundamentals, and core switching principles.",
+    skills: ["Networking", "IPv4", "IPv6", "Routing", "Switching"],
   },
   {
     title: "Programming Essentials in Python",
     issuer: "Cisco Networking Academy",
     date: "2024",
     image: "/PE1.png",
+    description:
+      "Developed confidence in Python syntax, logic flow, and algorithmic thinking through hands-on coding exercises.",
+    skills: ["Python", "Logic", "Algorithms", "Automation"],
   },
   {
     title: "Programming Essentials in C",
     issuer: "Cisco Networking Academy",
     date: "2024",
     image: "/PE2.png",
+    description:
+      "Built a solid understanding of structured programming, memory management, and low-level problem solving in C.",
+    skills: ["C", "Programming", "Memory", "Problem Solving"],
   },
   {
     title: "Endpoint Security",
     issuer: "Cisco Networking Academy",
     date: "2024",
     image: "/Endpoint Security.png",
+    description:
+      "Explored essential endpoint protection practices, threat awareness, and device-level security hardening strategies.",
+    skills: ["Cybersecurity", "Security", "Linux", "Threats"],
   },
 ];
 
 export default function Achievements() {
-  const [selectedAchievement, setSelectedAchievement] = useState(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const selectedImage = useMemo(() => {
-    if (!selectedAchievement) return null;
-    return achievements.find((item) => item.title === selectedAchievement.title)?.image || null;
-  }, [selectedAchievement]);
-
-  const openAchievement = (achievement, index) => {
-    setSelectedAchievement(achievement);
-    setActiveIndex(index);
-  };
-
-  const closeAchievement = () => setSelectedAchievement(null);
-
-  const showPrev = () => {
-    const nextIndex = (activeIndex - 1 + achievements.length) % achievements.length;
-    setActiveIndex(nextIndex);
-    setSelectedAchievement(achievements[nextIndex]);
-  };
-
-  const showNext = () => {
-    const nextIndex = (activeIndex + 1) % achievements.length;
-    setActiveIndex(nextIndex);
-    setSelectedAchievement(achievements[nextIndex]);
-  };
-
   return (
     <section id="achievements" className="achievements-section">
       <div className="section-heading">
@@ -68,46 +51,58 @@ export default function Achievements() {
         </p>
       </div>
 
-      <div className="achievements-grid">
-        {achievements.map((achievement, index) => (
-          <motion.article
-            key={achievement.title}
-            className="achievement-card"
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.35, delay: index * 0.06 }}
-            whileHover={{ y: -6, scale: 1.01 }}
-          >
-            <button
-              className="achievement-image-button"
-              type="button"
-              onClick={() => openAchievement(achievement, index)}
-              aria-label={`Open ${achievement.title}`}
+      <div className="featured-showcase">
+        {achievements.map((achievement, index) => {
+          const isReversed = index % 2 === 1;
+
+          return (
+            <motion.article
+              key={achievement.title}
+              className={`achievement-feature ${isReversed ? "reversed" : ""}`}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.4, ease: "easeOut", delay: index * 0.05 }}
+              whileHover={{ y: -6, scale: 1.01 }}
             >
-              <img src={achievement.image} alt={achievement.title} />
-            </button>
+              <div className="achievement-media">
+                <div className="achievement-frame">
+                  <div className="achievement-toolbar">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  <div className="achievement-image-shell">
+                    <img src={achievement.image} alt={`${achievement.title} certificate`} />
+                  </div>
+                </div>
+              </div>
 
-            <div className="achievement-content">
-              <h3>{achievement.title}</h3>
-              <p className="achievement-issuer">{achievement.issuer}</p>
-              {achievement.date ? <p className="achievement-date">{achievement.date}</p> : null}
-            </div>
-          </motion.article>
-        ))}
+              <div className="achievement-panel">
+                <p className="featured-label">Featured Achievement</p>
+                <h3>{achievement.title}</h3>
+
+                <div className="achievement-meta">
+                  <span>{achievement.issuer}</span>
+                  <span>{achievement.date}</span>
+                </div>
+
+                {achievement.description ? <p className="featured-description">{achievement.description}</p> : null}
+
+                {achievement.skills?.length ? (
+                  <div className="tech-stack">
+                    {achievement.skills.map((skill) => (
+                      <span key={skill} className="tech-chip">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            </motion.article>
+          );
+        })}
       </div>
-
-      <ImageModal
-        isOpen={Boolean(selectedAchievement)}
-        image={selectedImage}
-        title={selectedAchievement?.title}
-        currentIndex={activeIndex}
-        total={achievements.length}
-        showNavigation
-        onClose={closeAchievement}
-        onPrev={showPrev}
-        onNext={showNext}
-      />
     </section>
   );
 }
