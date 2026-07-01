@@ -5,7 +5,7 @@ const achievements = [
   {
     title: "CCNA: Introduction to Networks",
     issuer: "Cisco Networking Academy",
-    date: "2026",
+    date: "2025",
     image: "/CCNA Introduction to Networks.png",
     description:
       "A strong foundation in networking concepts, IP connectivity, routing fundamentals, and core switching principles.",
@@ -14,7 +14,7 @@ const achievements = [
   {
     title: "Programming Essentials in Python",
     issuer: "Cisco Networking Academy",
-    date: "2024",
+    date: "2025",
     image: "/PE1.png",
     description:
       "Developed confidence in Python syntax, logic flow, and algorithmic thinking through hands-on coding exercises.",
@@ -23,7 +23,7 @@ const achievements = [
   {
     title: "Programming Essentials in C",
     issuer: "Cisco Networking Academy",
-    date: "2024",
+    date: "2026",
     image: "/PE2.png",
     description:
       "Built a solid understanding of structured programming, memory management, and low-level problem solving in C.",
@@ -32,7 +32,7 @@ const achievements = [
   {
     title: "Endpoint Security",
     issuer: "Cisco Networking Academy",
-    date: "2024",
+    date: "2025",
     image: "/Endpoint Security.png",
     description:
       "Explored essential endpoint protection practices, threat awareness, and device-level security hardening strategies.",

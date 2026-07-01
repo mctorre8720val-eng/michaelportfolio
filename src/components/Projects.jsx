@@ -25,7 +25,7 @@ const projects = [
     title: "ScentGuard",
     description:
       "An IoT-inspired concept project focused on intelligent ambient sensing and modern interface design.",
-    screenshots: ["/ScentGuard.png"],
+    screenshots: ["/wip.png"],
     techStack: ["Arduino", "ESP32", "Python", "Node.js", "MQTT"],
     github: "https://github.com/",
     live: "#",
@@ -34,7 +34,7 @@ const projects = [
     title: "Clinic Reservation",
     description:
       "A reservation workflow for clinic rooms with clear scheduling and a polished desktop experience.",
-    screenshots: ["/ClinicReservation.png"],
+    screenshots: ["/wip.png"],
     techStack: ["Java", "Swing", "MySQL", "XAMPP", "NetBeans"],
     github: "https://github.com/",
     live: "#",

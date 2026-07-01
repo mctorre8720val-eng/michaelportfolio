@@ -1,6 +1,5 @@
 #projects {
   background: linear-gradient(135deg, rgba(27, 35, 53, 0.98), rgba(35, 44, 62, 0.95));
-  border-radius: 28px;
   padding: 72px 34px;
   position: relative;
   overflow: hidden;
@@ -159,6 +158,37 @@
 .tech-chip:hover {
   transform: translateY(-2px);
   background: rgba(59, 130, 246, 0.2);
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), #60a5fa);
+  color: #f8fafc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 10px 24px rgba(59, 130, 246, 0.16);
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+}
+
+.project-link.secondary {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .project-controls {
